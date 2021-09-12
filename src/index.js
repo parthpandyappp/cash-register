@@ -3,7 +3,7 @@ const payedInput = document.getElementById("cash");
 const formSubmit = document.getElementById("form-submit")
 const noOfNotes = document.querySelectorAll(".num-of-notes");
 
-// console.log(noOfNotes)
+console.log("Parth")
 
 formSubmit.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -29,7 +29,7 @@ formSubmit.addEventListener("submit", (e) => {
 
         let numberOfNotes = Math.trunc(moneyToReturn / notes[i])
         moneyToReturn = moneyToReturn % notes[i];
-        noOfNotes[i].innerText = numberOfNotes;
+        noOfNotes[i + 1].innerText = numberOfNotes;
 
 
 

@@ -1,46 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Cash Register</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cash Register</title>
+
+    <!-- talwind CDN -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="https://i.ibb.co/F7LHFPc/icons8-party-64.png"
+    />
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .h-75 {
+        height: 75vh;
+      }
+    </style>
   </head>
-  <body>
-    <div>
-      <form id="form-submit">
-        <label>Bill Amount</label>
-        <input type="number" name="bill" id="bill" />
-        <label>Cash Given</label>
-        <input type="number" name="cash" id="cash" />
-        <button type="submit">Check</button>
+  <body class="flex flex-col justify-center items-center">
+    <nav
+      class="
+        flex
+        justify-between
+        h-20
+        w-screen
+        items-center
+        bg-blue-100
+        shadow
+        md:px-6
+      "
+    >
+      <h1 class="flex font-bold">
+        <span class="px-2"
+          ><img
+            src="https://img.icons8.com/material-two-tone/24/000000/cash.png" /></span
+        >Cash Register
+      </h1>
+      <div class="flex space-x-2 font-bold items-center">
+        <a
+          class="flex items-center"
+          href="https://github.com/parthpandyappp/numero-de-la-suerte/"
+          ><span
+            ><img
+              src="https://img.icons8.com/doodle/48/000000/github--v1.png" /></span
+        ></a>
+        <a
+          class="flex items-center px-1"
+          href="https://parthpandyappp.github.io/"
+          ><span
+            ><img
+              src="https://img.icons8.com/bubbles/50/000000/gender-neutral-user.png" /></span
+        ></a>
+      </div>
+    </nav>
+    <div class="flex flex-col justify-center items-center p-5 w-screen">
+      <form class="flex flex-col space-y-2 border-2 border-blue-500 p-3 rounded-lg mt-12 w-5/6 md:w-1/3" id="form-submit" required >
+        <label class="font-bold">Bill Amount</label>
+        <input class="border-2 border-gray-200 rounded p-2" type="number" name="bill" id="bill" />
+        <label class="font-bold">Cash Given</label>
+        <input class="border-2 border-gray-200 rounded p-2" type="number" name="cash" id="cash" />
+        <div class="text-center">
+          <button
+            class="bg-blue-500 shadow px-3 py-2 font-bold text-white rounded"
+            type="submit"
+          >Check</button></div>
       </form>
-      <table
+      <table class="table-auto border-separate border border-green-900 mt-4 p-3 rounded"
         id="display-table"
       >
-        <tr class="">
-          <th >Number of Notes</th>
-          <td class="num-of-notes "></td>
-          <td class="num-of-notes "></td>
-          <td class="num-of-notes "></td>
-          <td class="num-of-notes "></td>
-          <td class="num-of-notes "></td>
-          <td class="num-of-notes "></td>
-          <td class="num-of-notes "></td>
-        </tr>
-        <tr class="bg-indigo-100">
-          <th >Amount</th>
-          <td >2000</td>
-          <td >500</td>
-          <td >100</td>
-          <td >20</td>
-          <td >10</td>
-          <td >5</td>
-          <td >1</td>
+        <tr>
+          <th class="num-of-notes border border-blue-100 px-2 text-left text-lg">Number of Notes</th>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+          <td class="num-of-notes border border-blue-100 px-2 text-lg">0</td>
+        </tr><button type="submit"></button>
+        <tr>
+          <th class="border border-blue-100 px-2 text-left text-lg">Amount</th>
+          <td class="border border-blue-100 px-2 text-lg">2000</td>
+          <td class="border border-blue-100 px-2 text-lg">500</td>
+          <td class="border border-blue-100 px-2 text-lg">100</td>
+          <td class="border border-blue-100 px-2 text-lg">20</td>
+          <td class="border border-blue-100 px-2 text-lg">10</td>
+          <td class="border border-blue-100 px-2 text-lg">5</td>
+          <td class="border border-blue-100 px-2 text-lg">1</td>
         </tr>
       </table>
     </div>
     <div>
     <script src="src/index.js"></script>
   </body>
+  <footer
+    class="
+      flex
+      justify-center
+      items-center
+      bg-blue-100
+      space-x-2
+      h-20
+      w-screen
+      mt-14
+    "
+  >
+    <a href="https://twitter.com/parthpandyappp/">
+      <img src="https://img.icons8.com/doodle/48/000000/twitter-circled.png" />
+    </a>
+    <a href="https://www.linkedin.com/in/parthpandyappp">
+      <img src="https://img.icons8.com/doodle/48/000000/linkedin-circled.png" />
+    </a>
+    <a href="https://github.com/parthpandyappp"
+      ><img src="https://img.icons8.com/plasticine/60/000000/github.png"
+    /></a>
+  </footer>
 </html>
